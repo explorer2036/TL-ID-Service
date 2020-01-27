@@ -1,0 +1,18 @@
+server:
+  listen_addr: "0.0.0.0:15002" # the grpc listen address
+
+db:
+  user: "postgres" # the username for database
+  passwd: "123456" # the passwd for database
+  host: "192.168.0.4" # the host for database
+  port: "5432" # the port for database
+  name: "postgres" # the database name
+
+log:
+  output_level: "info" # the log level with value in [debug, info, warn, error]
+  output_path: "stdout" # a file system path to write the log data to
+  rotation_path: "./logs/TL-ID-Service.log" # the path to a rotating log file
+  rotation_max_size: 100 # the maximum size in megabytes of a log file before it get rotated. It defaults to 100 megabytes.
+  rotation_max_age: 30 # the maximum number of days to retain old log files based on the timestamp encoded in their filename
+  rotation_max_backups: 1000 # the maximum number of old log files to retain
+  json_encoding: false # whether the log is formatted as JSON
